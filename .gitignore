@@ -1,0 +1,88 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  .gitignore — Azure AI Search RAG Agent
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Secrets & credentials (NEVER commit these) ───────────────────────────────
+.env
+.env.*
+!.env.example          
+*.pem
+*.key
+secrets/
+credentials/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]              # .pyc  .pyo  .pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.python-version        # pyenv version pin (optional to commit — your choice)
+
+# ── Streamlit ────────────────────────────────────────────────────────────────
+.streamlit/secrets.toml   # Streamlit secrets file — contains API keys
+
+# ── Jupyter / IPython ────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Testing & coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# ── Type checkers & linters ───────────────────────────────────────────────────
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+# ── IDEs & editors ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store             # macOS finder metadata
+Thumbs.db             # Windows thumbnail cache
+
+# ── Uploaded / generated PDF artefacts ───────────────────────────────────────
+# Uncommit any PDFs you used during local testing
+*.pdf
+docs/
+data/
+uploads/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
